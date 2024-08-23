@@ -1,0 +1,472 @@
+:root{
+    --navy:#a40000
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #1b2538;
+    padding: 1rem;
+    margin: 2rem 0;
+    margin-top: 10rem;
+    background-color: #f6f6dd;
+}
+
+.heading span{
+    color:var(--navy);
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: #1b2538;
+    color: #f6f6dd;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover{
+    background-color:var(--navy);
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #1b2538;
+    padding: 2rem 9%;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgb(0,0,0,.1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .logo{
+    margin-right: auto;
+    font-size: 3rem;
+    color: #f6f6dd;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color:var(--navy);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #fdfddd;
+    transition: all 0.3s ease 0s;
+}
+
+header .navbar a:hover{
+    color:var(--navy)
+    
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #fdfddd;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border:.1rem solid #fdfddd;
+    display: none;
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../images/tess.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #fdfddd;
+}
+
+.home .content{
+    max-width: 75rem;
+}
+
+.home .content h3{
+    font-size: 4rem;
+    color: #1b2538;
+    max-width: 49rem;
+}
+
+.home .content span{
+    font-size: 2rem;
+    color: var(--navy);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #1b2538;
+    padding: 1rem 0;
+    line-height: 1.5;
+    max-width: 89rem;
+    text-align: justify;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+}
+
+.about .row .content{
+    flex: 1 1 10rem;
+
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #a40000;
+    text-align: justify;
+    
+}
+ .about .row .content p{
+    font-size: 1.5rem;
+    color: #1b2538;
+    padding: 1rem 0;
+    padding-top: 1rem;
+    line-height: 1.5rem;
+    max-width: 49rem;
+    text-align: justify;
+ }
+
+.feature{
+    background-color:#1b2538;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.feature .feature-item{
+    background-color:#a40000;
+    border: .1rem solid rgb(0,0,0.1,);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.feature .feature-item i{
+    height: 5rem;
+    margin-right: 2rem;
+    color: #f6f6dd;
+    font-size: 5rem;
+}
+
+.feature .feature-item h3{
+    color: #f6f6dd;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.feature-item:hover {
+    transform: translateY(-50px);
+    
+}
+
+.barr .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.barr .content h3{
+    font-size: 3rem;
+    color: #a40000;
+}
+
+.barr .description p1{
+    font-size: 1.5rem;
+    color: #a40000;
+    text-align: center; /* Memusatkan teks secara horizontal */
+    display: flex; /* Flexbox untuk penataan yang lebih mudah */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    margin-bottom: 0; /* Mengurangi jarak antara judul dan chart */
+    padding-top: 1rem; /* Hapus padding atas jika ada */
+    
+}
+
+.barr .content p{
+   font-size: 1.5rem;
+   color: #1b2538;
+   padding: 1rem 0;
+   padding-top: 1rem;
+   line-height: 1.5rem;
+  
+}
+
+.barr .container{
+     margin: 32px auto;
+     width: fit-content;
+}
+
+.barr .chart-container{
+    display: flex;
+    text-align: center;
+}
+
+.bar{
+    position: relative;
+    height: 350px;
+    width: 74px;
+    background-image: linear-gradient(#c4c4c4 1px, transparent 1px), 
+    linear-gradient(90deg, #c4c4c4 1px, transparent 1px); 
+    background-size: 100% 11.5%;
+}
+
+.chart-item:last-child .bar {
+    border-right: 1px solid #c4c4c4; 
+}
+
+.bar-item{
+    position: absolute;
+    height: calc(var(--barSize)*1%);
+    width: 100%;
+    bottom: 0;
+}
+
+.chart-item:nth-child(1) .bar-item{
+    background-color: palevioletred;
+}
+.chart-item:nth-child(2) .bar-item{
+    background-color: rgb(199, 112, 216);
+}
+.chart-item:nth-child(3) .bar-item{
+    background-color: rgb(112, 135, 216);
+}
+.chart-item:nth-child(4) .bar-item{
+    background-color: rgb(159, 216, 112);
+}
+.chart-item:nth-child(5) .bar-item{
+    background-color: rgb(216, 174, 112);
+}
+.chart-item:nth-child(6) .bar-item{
+    background-color: rgb(57, 143, 167);
+}
+.chart-item:nth-child(7) .bar-item{
+    background-color: rgb(186, 42, 42);
+}
+.chart-item:nth-child(8) .bar-item{
+    background-color: rgb(53, 196, 170);
+}
+.chart-item:nth-child(9) .bar-item{
+    background-color: rgb(213, 225, 46);
+}
+
+.bar-item:hover::before{
+    content: attr(title);
+    position: absolute;
+    background-color: #fff;
+    padding: 10px 20px;
+    top: -28px;
+    left: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bar-item::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -4px;
+    left: 22px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    z-index: 2;
+}
+.bar-label{
+    margin-top: 8px;
+    
+}
+.penjelasan .description p {
+    font-size: 1.5rem;
+    color: #1b2538;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem; /* Jarak antar paragraf */
+    text-align: justify;
+}
+
+
+/* Styling untuk section Contact */
+.contact {
+    padding: 4rem 9%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact h3 {
+    font-size: 3rem;
+    color: #1b2538;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+.contact button {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1b2538;
+    color: #f6f6dd;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: var(--navy);
+}
+
+/* Ikon museum di sebelah kiri dan diperbesar */
+.museum-icon {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.museum-icon i {
+    font-size: 30rem; /* Ukuran ikon yang lebih besar */
+    color: #1b2538;  /* Warna ikon sesuai dengan tema */
+    margin-right: 2rem; /* Jarak antara ikon dan konten */
+    margin-left: 20rem;
+}
+
+/* Ikon pesan di bagian Contact */
+.contact .icon {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact .icon i {
+    color: #1b2538; /* Warna ikon sesuai dengan tema */
+}
+
+/* media queries */
+@media (max-width:991px){
+    
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:786px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    }
+
+    
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding:1.5rem;
+        background: #fff;
+        border:1rem solid rgba(0, 0, 0, .1)
+        display block;
+    }
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+}
+

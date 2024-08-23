@@ -1,0 +1,103 @@
+:root {
+    --navy: #a40000;
+}
+
+/* Menghilangkan transisi global yang tidak perlu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: none; /* Menonaktifkan transisi global */
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+/* Menambahkan padding pada section peta */
+#map-section {
+    padding-top: 8rem; /* Menyesuaikan dengan tinggi header */
+    background-color: #f9f9f9;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #1b2538;
+    padding: 1rem;
+    margin: 2rem 0;
+    margin-top: 10rem;
+    background-color: #f6f6dd;
+}
+
+.heading span {
+    color: var(--navy);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: #1b2538;
+    color: #f6f6dd;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: background-color 0.3s ease; /* Transisi khusus untuk background-color */
+}
+
+.btn:hover {
+    background-color: var(--navy);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1b2538;
+    padding: 2rem 9%;
+    z-index: 1000; /* Menjaga header di atas elemen lain */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    margin-right: auto;
+    font-size: 3rem;
+    color: #f6f6dd;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: var(--navy);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #fdfddd;
+    transition: color 0.3s ease; /* Transisi khusus untuk color */
+}
+
+header .navbar a:hover {
+    color: var(--navy);
+}
+
+header #toggler {
+    display: none;
+}

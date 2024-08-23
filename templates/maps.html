@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Museum di Bandung</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section untuk Header -->
+    <section id="header-section">
+        <header>
+            <input type="checkbox" name="" id="toggler">
+            <a href="#" class="logo">WEBGIS<span>.</span></a>
+
+            <nav class="navbar">
+                <a href="/">Home</a>
+                <a href="maps">Maps</a>
+                <a href="about">About</a>
+            </nav>
+        </header>
+    </section>
+
+    <!-- Section untuk peta -->
+    <section id="map-section">
+        <div id="map"></div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script>
+        // Inisialisasi peta
+        var map = L.map('map').setView([-6.914744, 107.60981], 12);
+
+        // Menambahkan layer peta dari OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Memuat data lokasi dari endpoint /lokasi
+        fetch('/lokasi')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(function(lokasi) {
+                    L.marker([lokasi.latitude, lokasi.longitude]).addTo(map)
+                        .bindPopup(`<b>${lokasi.name}</b><br>${lokasi.address}`);
+                });
+            });
+    </script>
+</body>
+</html>
